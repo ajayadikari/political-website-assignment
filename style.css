@@ -1,0 +1,764 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #228b22;
+    --black: black;
+    --orange: rgb(248, 105, 57);
+    --red: #B32624;
+    --lightgreen: #4cbb17;
+    --black: #100E09;
+    --lightblack: #454545;
+}
+
+.body {
+    background-color: #ffffff;
+    background: url("images/second-section-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.first-container {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+nav {
+    width: 92%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom var(--black) 0%, var(--black) 50%, green 50%, green 50%);
+    box-shadow: 2px 2px 20px 1px gray;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.logo {
+    width: 65px;
+    height: 55px;
+    background-image: url('images/congress-symbol.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.up {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.down {
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+#text {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-weight: 500;
+}
+
+.nav-text {
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+i {
+    filter: invert(100%);
+    margin: 3px;
+    padding: 3px;
+    width: 40px;
+    background-color: rgb(240, 218, 218);
+    height: 40px;
+    display: flex;
+    height: auto;
+    text-align: center;
+}
+
+i:hover {
+    background-color: rgb(210, 194, 194);
+}
+
+.nav-left {
+    border-right: 50px solid transparent;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--orange) 0%, var(--orange) 50%, #4cbb17 50%, #4cbb17 100%);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-right {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-right .up {
+    background-color: var(--black);
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right .up h6 {
+    color: #ffffff;
+    margin: 3px;
+    padding: 3px;
+}
+
+.nav-right .down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    padding-right: 30%;
+    background: linear-gradient(to right, var(--lightgreen), var(--green));
+    position: relative;
+    font-size: 13px;
+}
+
+.nav-right .down ul {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    height: 50%;
+    right: 20%;
+}
+
+.nav-right .down ul li {
+    padding: 2px 15px 2px 15px;
+    margin: 0px 5px 0px 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-right .down ul li::before {
+    content: "";
+    position: absolute;
+    height: 15%;
+    width: 00%;
+    bottom: 0px;
+    background-color: var(--red);
+    transition: width 0.2s ease-out;
+    z-index: -1;
+}
+
+.nav-right .down ul li:hover::before {
+    width: 60%;
+    z-index: 1;
+}
+
+.nav-right .down ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* css for first page inner container starts from here */
+
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-box {
+    position: relative;
+    background: url("images/congress-symbol-transparent.png");
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.inner-container .left-box p {
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: var(--lightblack);
+    line-height: 40px;
+}
+
+.inner-container .left-box p span {
+    background-color: var(--black);
+    color: #ffffff;
+}
+
+.inner-container .left-box #sign {
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    background: url("images/rahul-gandhi-sign.png");
+    background-size: cover;
+    background-color: #100E09;
+    background-repeat: no-repeat;
+    top: 65%;
+    left: 20%;
+    z-index: -1;
+}
+
+#leadership {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    box-shadow: 0px 1px 10px 1px gray;
+}
+
+.left-box p {
+    font-size: 25px;
+}
+
+.right-box {
+    background: url("images/rahul-gandhi-img-1.jpg");
+    height: 100vh;
+    width: 48vw;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: -3;
+}
+
+/* end of first page css */
+
+/*flag designing section*/
+.mid-section {
+    position: absolute;
+    top: 80%;
+    width: 100vw;
+    z-index: -1;
+    height: 450px;
+    background: url("images/indian-flag-2.png");
+    background-size: 100% 275%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 2px;
+    overflow: hidden;
+}
+
+/* second container designing starts from here */
+
+.second-container {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    background-position: center;
+    padding-top: 100px;
+}
+
+.second-inner-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.second-container .second-inner-container .left {
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px gray;
+}
+
+.second-container .second-inner-container .left .img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: url("images/rahul-gandhi\ img-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.second-container .second-inner-container .right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 500px;
+}
+
+.second-container .second-inner-container .right .upper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.second-container .second-inner-container .right .upper h1 {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.second-container .second-inner-container .right .upper h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+    width: 50px;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(to right, var(--orange) 0%, var(--orange) 33%, #ffffff 33%, #ffffff 66%, var(--green) 66%, var(--green) 100%);
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px gray;
+    margin-bottom: 30px;
+}
+
+.tabs #small-line {
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    background-color: var(--red);
+    box-shadow: 2px 2px 20px 1px gray;
+}
+
+.tabs span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    transition: color 0.2s ease;
+}
+
+.btn:hover {
+    color: var(--lightgreen);
+}
+
+.disable {
+    display: none;
+}
+
+.table-text {
+    font-size: 15px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    line-height: 25px;
+}
+
+.tuple {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.side-heading {
+    width: 30%;
+    color: var(--red);
+}
+
+.active {
+    color: var(--red);
+}
+
+.ans {
+    width: 60%;
+}
+
+.sidebar,
+.sidebar-icon {
+    position: absolute;
+    left: -700px;
+}
+
+
+
+/* start of footer */
+
+footer {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--orange) 0%, var(--orange) 33%, #ffffff 33%, #ffffff 66%, var(--green) 66%, var(--green) 100%)
+}
+
+
+/* responsive design starts here */
+@media screen and (max-width : 1160px) {
+    .inner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("images/rahul-gandhi-img-1.jpg");
+        background-position: center;
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .inner-container .left-box {
+        display: flex;
+        width: 100vw;
+        margin: auto;
+        align-items: safe;
+        justify-content: center;
+        background: none;
+        position: relative;
+        left: -200px;
+    }
+
+    .inner-container .right-box {
+        display: none;
+    }
+
+    .inner-container .left-box #sign {
+        position: absolute;
+        left: 0;
+    }
+
+    .mid-section {
+        display: none;
+    }
+
+    .tabs {
+        background-color: #ffffff;
+    }
+
+    hr {
+        display: block;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    nav {
+        width: 100%;
+    }
+
+    nav .nav-right {
+        justify-content: flex-end;
+    }
+
+    .nav-left {
+        display: none;
+    }
+    .second-container{
+        height: 100vh;
+    }
+    .second-container .second-inner-container .left {
+        height: 23%;
+    }
+    .second-inner-container{
+        height: 172% !important;
+    }
+
+    .second-inner-container .left .img {
+        height: 387px !important;
+    }
+
+    .second-inner-container .right {
+        width: 55%;
+    }
+
+    .mid-section {
+        display: none;
+    }
+    .second-container .second-inner-container .left .img{
+        
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .inner-container {
+        display: block;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .inner-container .left-box {
+        width: 80%;
+    }
+
+    .inner-container .left-box #sign {
+        left: 180px;
+    }
+
+    .second-container .second-inner-container .left {
+        width: 80%;
+    }
+
+    .second-inner-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 223%;
+    }
+
+    .second-inner-container .right .upper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-inner-container .left {
+        width: 50%;
+    }
+
+    .inner-container .left-box {
+        width: 750px;
+    }
+
+    .second-container .second-inner-container .right .upper h1 {
+        position: relative;
+        margin-bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-container .second-inner-container .right .upper h1::after {
+        width: 100%;
+    }
+
+    .second-container .second-inner-container .right {
+        width: 80%;
+    }
+
+    .second-inner-container .right {
+        /* width: 70%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 505px;
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width :780px) {
+    .first-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    nav {
+        display: none;
+    }
+    .inner-container .left-box{
+        left: -130px;
+        bottom: 0;
+        justify-content: flex-end;
+    }
+
+    .sidebar {
+        min-width: 70%;
+        height: 500px;
+        background: linear-gradient(to bottom, var(--orange), #c9c4c4, var(--green));
+        position: absolute;
+        top: -700px;
+        left: 00px;
+        transition: all 0.4s ease;
+        z-index: 2;
+        box-shadow: 1px 1px 5px 1px gray;
+    }
+
+    .activate-sidebar {
+        top: 0px;
+    }
+
+    .ham-burger {
+        transition: all 0.4s ease;
+    }
+
+    .close {
+        transition: all 0.4s ease;
+    }
+
+    .icon {
+        background: url("images/congress-symbol-transparent.png");
+        width: 40px;
+        height: 50px;
+        margin: auto;
+        margin-top: 10px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+    }
+
+    .sidebar-icon {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 30px;
+        z-index: 5;
+    }
+
+    .items {
+        margin: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .items ul {
+        list-style: none;
+    }
+
+    .items ul li {
+        margin-top: 10px;
+        padding: 8px;
+        width: 15rem;
+        height: 2.5rem;
+        background-color: #228b22;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .disable-icon {
+        display: none;
+    }
+
+    .items ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .foot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .fa {
+        color: white;
+        filter: invert(0);
+        background-color: var(--black);
+    }
+}
+
+/* styling for the mobile starts here */
+
+@media screen and (max-width: 430px) {
+    .first-container {
+        background: url("images/rahul-gandhi-img-1.jpg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    .left-box {
+        position: absolute;
+        top: 0;
+        font-size: 100px;
+    }
+
+    .second-container {
+        position: absolute;
+        top: 80%;
+    }
+
+    .second-container .second-inner-container .right {
+        width: 75%;
+    }
+
+    .second-container .second-inner-container .right .upper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-container .second-inner-container .right .upper h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .second-container .second-inner-container .right .upper h1::after {
+        width: 100%;
+    }
+
+    .second-inner-container {
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .second-inner-container .right {
+        width: 82%;
+    }
+
+    .second-inner-container .right {
+        position: relative;
+    }
+
+    .second-container .second-inner-container .left .img {
+        height: 200px !important;
+    }
+
+    .second-container .second-inner-container .left {
+        height: 200px;
+    }
+
+    .tabs {
+        width: 100%;
+    }
+
+    .table-text {
+        height: 100px;
+    }
+
+    .tuple {
+        width: 100%;
+    }
+}
